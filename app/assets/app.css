@@ -23,3 +23,20 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.car {
+  width: 250px;
+  float: left;
+  margin: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.car img {
+  margin: auto;
+  width: 70%;
+  clear: both;
+  float: none;
+  display: block;
+
+}

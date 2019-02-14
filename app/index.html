@@ -28,12 +28,14 @@
       </div>
       <div class="col-md-10">
         <div ng-controller="CarsController as vm">
-          <ul>
-            <li ng-repeat="car in vm.cars | filter:$ctrl.queryk">
-              <span>{{car.name}}</span>
-            </li>
-          </ul>
-
+          <div class="car" ng-repeat="car in vm.cars | filter: $ctrl.query | limitTo: 10">
+            <a href="#!/cars/{{car.id}}">
+                {{car.name}}
+                  <img ng-src="{{car.image}}" alt="">
+                {{car.country}}
+                {{car.year}}
+            </a>
+          </div>
         </div>
       </div>
     </div>
