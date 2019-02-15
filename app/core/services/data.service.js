@@ -8,15 +8,24 @@
     /* @ngInject */
     function dataService($http) {
         return {
-            getCars
+            getCars,
+            getCountry
         };
         ////////////////
 
         function getCars() {
             return $http.get('/data.json')
-                .then( cars => cars )
-                .catch(function(message) {
-                    alert(message);
+                .then(cars => cars)
+                .catch(function (message) {
+                    console.log(message);
+                });
+        }
+
+        function getCountry() {
+            return $http.get('/countries.json')
+                .then(countries => countries.data)
+                .catch(function (message) {
+                    console.log(message);
                 });
         }
     }

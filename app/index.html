@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BMW Test Drive</title>
+  <title>Car Driving Sessions</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./assets/app.css">
@@ -19,48 +19,36 @@
   <![endif]-->
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2">
-        <!--Sidebar content-->
 
-        Search: <input ng-model="$ctrl.query" />
-
-      </div>
-      <div class="col-md-10">
-        <div ng-controller="CarsController as vm">
-          <div class="car" ng-repeat="car in vm.cars | filter: $ctrl.query | limitTo: 10">
-            <a href="#!/cars/{{car.id}}">
-                {{car.name}}
-                  <img ng-src="{{car.image}}" alt="">
-                {{car.country}}
-                {{car.year}}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!--Shell -->
+  <div ng-include="'./layout/shell.html'"></div>
   </div>
-
   <!-- inject:js -->
-
-
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.module.js"></script>
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
 
+  <!--layout module-->
+  <script src="./layout/layout.module.js"></script>
+  <script src="./layout/shell.controller.js"></script>
   <!--core module-->
   <script src="./core/services/core.module.js"></script>
   <script src="./core/services/data.service.js"></script>
-  <!--avengers module-->
+  <!--cars module-->
   <script src="./modules/cars/cars.module.js"></script>
-  <!--<script src="/app/modules/cars/config.route.js"></script>-->
   <script src="./modules/cars/cars.controller.js"></script>
+  <!--car detail module-->
+  <script src="./modules/car/car-detail.module.js"></script>
+  <script src="./modules/car/car-detail.controller.js"></script>
+  <!--filter module-->
+  <script src="./core/directives/countryFlag.directive.js"></script>
   <!-- end inject -->
 </body>
 </html>
