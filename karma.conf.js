@@ -8,8 +8,10 @@ module.exports = function(config) {
       'lib/angular/angular.js',
       'lib/angular-route/angular-route.js',
       '../node_modules/angular-mocks/angular-mocks.js',
-      'core/**/*.js',
-      'view*/**/*.js'
+      //modules
+      'core/services/core.module.js',
+      //files
+      'core/**/*.js'
     ],
 
     autoWatch: true,

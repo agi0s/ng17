@@ -5,7 +5,7 @@
         .module('app', [
             'ngRoute',
             /*
-             * Feature areas
+             * Features
              */
             'app.cars',
             'app.core',
