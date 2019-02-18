@@ -10,8 +10,11 @@ module.exports = function(config) {
       '../node_modules/angular-mocks/angular-mocks.js',
       //modules
       'core/services/core.module.js',
+      'modules/cars/cars.module.js',
+      'modules/car/car-detail.module.js',
       //files
-      'core/**/*.js'
+      'core/**/*.js',
+      'modules/**/*.js'
     ],
 
     autoWatch: true,

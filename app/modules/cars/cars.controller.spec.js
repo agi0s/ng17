@@ -1,33 +1,13 @@
-(function () {
-    'use strict';
+describe('CarsController', function() {
 
-    angular
-        .module('app.cars')
-        .controller('CarsController', CarsController);
+    beforeEach(module('app.cars'));
 
-    /* @ngInject */
-    function CarsController(dataService) {
-        var vm = this;
-            vm.title = 'CarsController';
-            vm.cars = [];
+    describe('CarsController', inject(function($componentController) {
+        var ctrl = $componentController('CarsController');
 
-        activate();
+        it('should create a `cars` model with 31 cars',  () => {
+            expect(ctrl.cars.length).toBe(31);
+        })
+    }));
 
-        ////////////////
-
-        function activate() {
-            getCars();
-        }
-
-        function getCars() {
-            dataService.getCars().then(
-                cars => {
-                    vm.cars = cars.data;
-                },
-                err => alert(err)
-            )
-        }
-    }
-
-})();
-
+});

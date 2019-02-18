@@ -24,7 +24,6 @@
     function prependFlag(img, element) {
         var imgElem = angular.element("<img>");
         imgElem[0]['src'] = `assets/flags${img}`;
-        console.log(imgElem);
 
         element.prepend(imgElem);
     }
