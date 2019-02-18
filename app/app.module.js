@@ -10,7 +10,8 @@
             'app.cars',
             'app.core',
             'app.layout',
-            'app.carDetail'
+            'app.carDetail',
+            'app.addForm'
         ])
         .config(config);
 
@@ -24,6 +25,11 @@
             .when('/cars/:id', {
                 templateUrl: './modules/car/car-detail.template.html',
                 controller: 'carDetail',
+                controllerAs: 'vm'
+            })
+            .when('/addCar', {
+                templateUrl: './modules/addform/addform.template.html',
+                controller: 'addForm',
                 controllerAs: 'vm'
             })
             .otherwise('/cars');

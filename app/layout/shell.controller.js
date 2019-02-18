@@ -10,6 +10,5 @@
         var vm = this;
         vm.searchQuery = '';
 
-        activate();
     }
 })();

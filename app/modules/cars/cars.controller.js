@@ -10,6 +10,8 @@
         var vm = this;
             vm.title = 'CarsController';
             vm.cars = [];
+            vm.delete = deleteCar;
+            vm.add = addCar;
 
         activate();
 
@@ -26,6 +28,18 @@
                 },
                 err => alert(err)
             )
+        }
+
+        function deleteCar(id) {
+            vm.cars = vm.cars.filter( car => car.id !== id );
+        }
+
+        function addCar(car) {
+            let newCar = car;
+            newCar.img ? '' : newCar.image = 'assets/img/no-picture.png';
+            newCar.id ? '' : newCar.id = vm.cars.length;
+            vm.cars.unshift(car);
+            car = "";
         }
     }
 
