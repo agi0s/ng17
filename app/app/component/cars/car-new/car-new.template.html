@@ -1,0 +1,27 @@
+<div ng-controller="addForm as vm" class="addform">
+    <h5>Add new car</h5>
+        <form>
+            <div class="form-group">
+                <label for="name">Car Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Car title" required ng-model="vm.car.name">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" placeholder="Country" required ng-model="vm.car.country">
+            </div>
+            <div class="form-group">
+                <label for="horsepower">Horsepower</label>
+                <input type="text" class="form-control" id="horsepower" placeholder="horsepower" required ng-model="vm.car.horsepower">
+            </div>
+            <div class="form-group">
+                <label for="image">Car image</label>
+                <input type="file" class="form-control-file" id="image" ng-model="vm.car.image" disabled>
+            </div>
+        </form>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary">Cancel</button>
+    <button type="button" class="btn btn-primary" ng-click="vm.save(vm.car)">Add car</button>
+</div>
+</div>
+
+

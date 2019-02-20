@@ -1,0 +1,25 @@
+<div ng-controller="carDetail as vm">
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img ng-src="{{vm.car.image}}" class="card-img" alt="{{vm.car.name}}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{vm.car.name}}</h5>
+                    <p class="card-text">{{vm.car.description}}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Country:</b> {{vm.car.country}}</li>
+                        <li class="list-group-item"><b>Top speed:</b> {{vm.car.top_speed}}</li>
+                        <li class="list-group-item"><b>0 to 100km/h:</b> {{vm.car.zero_to_sixty}}</li>
+                        <li class="list-group-item"><b>Power:</b> {{vm.car.power}} horsepower</li>
+                        <li class="list-group-item"><b>Engine:</b> {{vm.car.engine}}</li>
+                        <li class="list-group-item"><b>Weight:</b> {{vm.car.weight}} pounds</li>
+                    </ul>
+                    <br>
+                    <a href="#" class="btn btn-primary btn-lg">Edit</a>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

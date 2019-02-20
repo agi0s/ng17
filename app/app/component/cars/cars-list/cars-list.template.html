@@ -1,0 +1,6 @@
+<div ng-controller="CarsController as vm">
+    <div class="row">
+    <car-card ng-repeat="car in $storage.cars | filter: vm.query" car="car" class="col-md-2 shadow-sm">
+    </car-card>
+    </div>
+</div>

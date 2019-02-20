@@ -1,0 +1,52 @@
+<div ng-controller="carEdit as vm">
+        <div class="card mb-3">
+           <div class="row no-gutters">
+              <div class="col-md-4">
+                 <img ng-src="{{vm.car.image}}" class="card-img" alt="{{vm.car.name}}">
+              </div>
+              <div class="col-md-8">
+                 <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Car name:</span><input ng-model="vm.car.name" placeholder="{{vm.car.name}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Country:</span><input ng-model="vm.car.country"  placeholder="{{vm.car.country}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Top speed:</span><input ng-model="vm.car.top_speed" placeholder="{{vm.car.top_speed}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">0 to 100km/h:</span><input ng-model="vm.car.zero_to_sixty" placeholder="{{vm.car.zero_to_sixty}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Power:</span><input ng-model="vm.car.power" placeholder="{{vm.car.power}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Engine:</span><input ng-model="vm.car.engine" placeholder="{{vm.car.engine}}"></div>
+                          </div>
+                       </li>
+                       <li class="list-group-item">
+                          <div class="input-group">
+                             <div class="input-group-prepend"><span class="input-group-text">Weight:</span><input ng-model="vm.car.weight" placeholder="{{vm.car.weight}}"></div>
+                          </div>
+                       </li>
+                    </ul>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg" ng-click="vm.update(vm.car)">Save</button>              
+                 </div>
+              </div>
+           </div>
+        </div>
+</div>

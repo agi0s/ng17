@@ -101,3 +101,7 @@
 .card-img-top {
   max-height: 163px;
 }
+
+.input-group>.input-group-prepend>.input-group-text {
+  width: 150px;
+}

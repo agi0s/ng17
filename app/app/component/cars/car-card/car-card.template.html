@@ -1,0 +1,14 @@
+<div class="card">
+    <a class="btn btn-danger delete" ng-click="vm.delete(car.id)">X</a>
+    <img ng-src="{{car.image}}" class="card-img-top" alt="{{car.name}}">
+    <div class="card-body">
+        <h5 class="card-title">{{car.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" country-flag="country">{{car.country}}</li>
+    </ul>
+    <div class="card-body">
+        <a href="#!car/{{car.id}}" class="btn btn-secondary">Car details</a>
+        <a href="#!cars/edit/{{car.id}}" class="btn btn-primary">Edit</a>
+    </div>
+</div>
